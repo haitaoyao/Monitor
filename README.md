@@ -8,7 +8,7 @@ Linux Host，MySQL，Oracle monitor tools
 	hmon.py: monitor Linux os system including cpu,memory,disk,net,file system at a regular interval.
 	mmon.py: monitor MySQL DataBase with innodb engine on Linux platform at a regular interval.
 	omon.py: monitor Oracle DataBase on Linux platform at a regular interval.
-	mon.sh:  convenient way to retieve monitor [OS/MySQL/Oralce] Datas.
+	mon.sh:  convenient way to retieve monitor [OS/MySQL/Oracle] Datas.
 	pidmon:  monitor Linux process.
 
 
