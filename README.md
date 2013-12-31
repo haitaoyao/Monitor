@@ -18,10 +18,10 @@ Linux Host，MySQL，Oracle monitor tools
 		nohup /home/script/hmon.py >/dev/null 2>&1 &
 	
 	2.deploy mmon.py:
-		nohup /home/script/mmon.py port >/dev/null 2>&1 &
+		nohup /home/script/mmon.py $PORT >/dev/null 2>&1 &
 	
 	3.deploy omon.py:
-		nohup /home/script/omon.py port >/dev/null 2>&1 &
+		nohup /home/script/omon.py >/dev/null 2>&1 &
 	
 3.Usage:
 ------------------
