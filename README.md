@@ -41,3 +41,12 @@ Linux Host，MySQL，Oracle monitor tools
 
 4.Metrics Interpret：
 ------------------
+	Host monitor metrics:
+
+	MySQL monitor metrics:
+
+	Oracle monitor metrics:
+
+
+5.Others:
+------------------
