@@ -1,1 +1,62 @@
 #!/bin/sh
+
+case $1 in
+core)
+				tail -20f /home/oracle/admin/host_core.log
+				;;
+cpu)
+				tail -20f /home/oracle/admin/host_cpu.log
+				;;
+mem)
+				tail -20f /home/oracle/admin/host_mem.log
+				;;
+disk)
+				tail -20f /home/oracle/admin/host_disk.log
+				;;
+fs)
+				tail -20f /home/oracle/admin/host_fs.log
+				;;
+net)
+				tail -20f /home/oracle/admin/host_net.log
+				;;
+pid)
+				python /home/oracle/admin/bin/pidmon.py $2
+				;;
+mysql) 
+				case $2 in 
+						plus)
+								tail -20f /home/oracle/admin/mysql_plus.log_$PORT
+								;;
+						*)    
+								tail -20f /home/oracle/admin/mysql_core.log_$PORT
+								;;
+				esac
+				;;
+oracle) 
+				case $2 in 
+						plus)
+								tail -20f /home/oracle/admin/oracle_plus.log_$ORACLE_SID
+								;;
+						*)    
+								tail -20f /home/oracle/admin/oracle_core.log_$ORACLE_SID
+								;;
+				esac
+				;;
+
+*)  
+				echo 
+				echo "Usage: hmon keyword"
+				echo "--------------------------------"
+				echo " core          --print the host core info"
+				echo " cpu           --print the host cpu info"
+				echo " mem           --print the host memory info"
+				echo " disk          --print the host disk info"
+				echo " fs            --print the host file system info"
+				echo " net           --print the host network info"
+				echo " pid pidvalue  --print pid monitor"
+				echo " mysql         --print the mysql core info"
+				echo " mysql plus    --print the mysql plus info"
+				echo " oracle        --print the oracle core info"
+				echo " oracle plus   --print the oracle plus info"
+				;;
+esac
