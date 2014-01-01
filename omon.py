@@ -535,6 +535,7 @@ if __name__ == '__main__':
 				SID	=str(sys.argv[1])
 			else:
 				print >>sys.stderr,"Error: pls input oracle SID!"
+				sys.exit(1)
 			chkEnv()
 			initEnv()
 			while(1):
